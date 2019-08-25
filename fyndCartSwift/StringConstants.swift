@@ -28,7 +28,7 @@ struct TableViewCellIds {
     static let defaultCellId = "defaultCellId"
     static let productSectionHeaderTableViewCell = "ProductSectionHeaderTableViewCell"
     static let productSectionHeaderSegementedTableViewCell = "ProductSectionHeaderSegementedTableViewCell"
-    static let listCollectionViewTableViewCell = "ListCollectionViewTableViewCell"
+    static let listCollectionViewTableViewCell = "ListCollectionViewTableViewCell"    
 }
 
 struct CollectionViewIds {

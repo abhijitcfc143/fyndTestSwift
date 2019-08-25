@@ -22,6 +22,9 @@ class ProductSectionHeaderTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        if #available(iOS 10, *) {
+            self.sendSubviewToBack(contentView)
+        }
     }
     
     

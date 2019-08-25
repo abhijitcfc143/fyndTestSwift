@@ -28,8 +28,12 @@ extension ProductListViewController : UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if !finalArray.isEmpty{
             if isListView{
-                if let count = self.finalArray[section].arrays?.count,let isExpandable = self.finalArray[section].isSectionExpanded,isExpandable{
-                    return count
+                if let count = self.finalArray[section].arrays?.count,let isExpandable = self.finalArray[section].isSectionExpanded,isExpandable{                    
+                    if let sectionExpanded = self.finalArray[section].sectionIndexExpanded{
+                        return count
+                    }
+                    self.finalArray[section].isSectionExpanded = false
+                    return 0
                 }
             }else{
                 return 1
@@ -45,29 +49,59 @@ extension ProductListViewController : UITableViewDelegate,UITableViewDataSource{
             return showDefaultCell(indexPath: indexPath)
         }else{
             return showListCollectionViewTableViewCell(indexPath: indexPath)
-        }
-        
-        
+        }   
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
     }
     
     func tableView(_ tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat {
         return 50
     }
     
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50
+    }
+    
+    
+    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if !finalArray.isEmpty{
             if isListView{
-                return showProductSectionHeaderTableViewCell(section: section)
+                let containerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: 50))
+                containerView.addSubview(showProductSectionHeaderTableViewCell(section: section))
+//                containerView.translatesAutoresizingMaskIntoConstraints = false
+                
+                
+//                containerView.widthAnchor.constraint(equalTo: tableView.widthAnchor).isActive = true
+//                containerView.leadingAnchor.constraint(equalTo:  self.tableView.leadingAnchor).isActive = true
+//                containerView.trailingAnchor.constraint(equalTo: self.tableView.trailingAnchor).isActive = true
+//                containerView.topAnchor.constraint(equalTo: self.tableView.topAnchor).isActive = true
+//                containerView.bottomAnchor.constraint(equalTo: self.tableView.bottomAnchor).isActive = true
+                
+                return containerView
             }else{
-                return showProductSectionHeaderSegementedTableViewCell(section: section)
+                let containerView = UIView()
+//                return showProductSectionHeaderSegementedTableViewCell(section: section)
+                containerView.addSubview(showProductSectionHeaderSegementedTableViewCell(section: section))
+//                containerView.translatesAutoresizingMaskIntoConstraints = false
+//                containerView.widthAnchor.constraint(equalTo: tableView.widthAnchor).isActive = true
+//                containerView.leadingAnchor.constraint(equalTo: self.tableView.leadingAnchor).isActive = true
+//                containerView.trailingAnchor.constraint(equalTo: self.tableView.trailingAnchor).isActive = true
+//                containerView.topAnchor.constraint(equalTo: self.tableView.topAnchor).isActive = true
+//                containerView.bottomAnchor.constraint(equalTo: self.tableView.bottomAnchor).isActive = true
+                return containerView
             }
         }
         return UIView()
     }
     
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 50
-    }
+    
     
     //    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     //        if isListView{

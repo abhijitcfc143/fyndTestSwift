@@ -18,6 +18,7 @@ class ProductListViewController: UIViewController {
     var isListView = false
     var randomShowAnimation = false
     var finalArray = [ProductSection]()
+    var buttonTitle = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,7 +56,7 @@ extension ProductListViewController{
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.rowHeight = UITableView.automaticDimension
-        self.tableView.estimatedRowHeight = UITableView.automaticDimension
+        self.tableView.estimatedRowHeight = 100
         
 //        self.tableView.sectionHeaderHeight = 50
 //        self.tableView.estimatedSectionHeaderHeight = UITableView.automaticDimension
@@ -165,6 +166,7 @@ extension ProductListViewController : ExpandableButtonClickedProtocol,TileSelect
     
     func expandableButton(button: UIButton) {
         let section = button.tag
+        self.finalArray[section].sectionIndexExpanded = section
         
         if !finalArray.isEmpty{
             var indexPathArray = [IndexPath]()
@@ -180,11 +182,49 @@ extension ProductListViewController : ExpandableButtonClickedProtocol,TileSelect
                 
                 button.setTitle(expanded ? "Open" : "Close", for: UIControl.State.normal)
                 
-                if expanded{
+                if expanded{                    
                     self.tableView.deleteRows(at: indexPathArray, with: UITableView.RowAnimation.fade)
                 }else{
+                    
+                    
+                    
+                    
+                    var indexPathArToDelete = [IndexPath]()
+                        for (index,value) in self.finalArray.enumerated(){
+                            
+                            if index != section && value.isSectionExpanded!{
+
+                                if let productArray = self.finalArray[index].arrays{
+                                    
+                                    for row in productArray.indices{
+                                        
+                                        let indexPath = IndexPath(row: row, section: index)
+                                        indexPathArToDelete.append(indexPath)
+                                        
+                                    }
+                                    
+                                    self.finalArray[index].sectionIndexExpanded = nil
+                                    print("Delete \(index) section")
+                                    
+                                    let c = self.tableView.tableHeaderView
+                                                                        
+                                    print(c)
+                                }
+                            }
+                        }
+                    
+                    self.tableView.beginUpdates()
                     self.tableView.insertRows(at: indexPathArray, with: UITableView.RowAnimation.fade)
+                    if !indexPathArToDelete.isEmpty{
+                        
+                        self.tableView.deleteRows(at: indexPathArToDelete, with: UITableView.RowAnimation.fade)
+                    }
+                    self.tableView.endUpdates()
+
                 }
+                
+                
+                
             }
         }
     }

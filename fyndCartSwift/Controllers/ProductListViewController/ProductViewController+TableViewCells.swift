@@ -31,6 +31,7 @@ extension ProductListViewController{
             cell.expandableButtonDelegate = self
             cell.expandableButton.tag = section
             if let isExpanded = sectionP.isSectionExpanded{
+                
                 cell.expandableButton.setTitle(isExpanded ? "Close" : "Open", for: UIControl.State.normal)
             }
             return cell
