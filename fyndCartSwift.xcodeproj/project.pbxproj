@@ -1,0 +1,853 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2E9704A9164B00F1BBE2A33A /* libPods-fyndCartSwiftUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F870166E595D84AC581A71E /* libPods-fyndCartSwiftUITests.a */; };
+		7C4ECFE5475C107662C48470 /* libPods-fyndCartSwiftTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44E2EAB87FC1EEA88893DC9B /* libPods-fyndCartSwiftTests.a */; };
+		9B58A080231118F600314473 /* ProductSectionHeaderSegementedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B58A07E231118F500314473 /* ProductSectionHeaderSegementedTableViewCell.swift */; };
+		9B58A081231118F600314473 /* ProductSectionHeaderSegementedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B58A07F231118F500314473 /* ProductSectionHeaderSegementedTableViewCell.xib */; };
+		9B58A08523111B3400314473 /* ListCollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B58A08323111B3400314473 /* ListCollectionViewTableViewCell.swift */; };
+		9B58A08623111B3400314473 /* ListCollectionViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B58A08423111B3400314473 /* ListCollectionViewTableViewCell.xib */; };
+		9B58A08A23111BC700314473 /* ProductColletionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B58A08823111BC700314473 /* ProductColletionViewCell.swift */; };
+		9B58A08B23111BC700314473 /* ProductColletionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B58A08923111BC700314473 /* ProductColletionViewCell.xib */; };
+		9B58A08D231148CA00314473 /* CustomCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B58A08C231148CA00314473 /* CustomCollectionViewFlowLayout.swift */; };
+		9B58A091231174B100314473 /* ShowImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B58A090231174B100314473 /* ShowImageViewController.swift */; };
+		9B58A093231268EA00314473 /* ProductViewController+APIRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B58A092231268EA00314473 /* ProductViewController+APIRequests.swift */; };
+		9B58A0952312696E00314473 /* ProductViewController+TableViewDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B58A0942312696E00314473 /* ProductViewController+TableViewDelegates.swift */; };
+		9B58A097231269F600314473 /* ProductViewController+TableViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B58A096231269F600314473 /* ProductViewController+TableViewCells.swift */; };
+		9B95BD97231039B500D93354 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B95BD96231039B500D93354 /* AppDelegate.swift */; };
+		9B95BD99231039B500D93354 /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B95BD98231039B500D93354 /* ProductListViewController.swift */; };
+		9B95BD9C231039B500D93354 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B95BD9A231039B500D93354 /* Main.storyboard */; };
+		9B95BD9E231039B700D93354 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B95BD9D231039B700D93354 /* Assets.xcassets */; };
+		9B95BDA1231039B700D93354 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B95BD9F231039B700D93354 /* LaunchScreen.storyboard */; };
+		9B95BDAC231039B700D93354 /* fyndCartSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B95BDAB231039B700D93354 /* fyndCartSwiftTests.swift */; };
+		9B95BDB7231039B700D93354 /* fyndCartSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B95BDB6231039B700D93354 /* fyndCartSwiftUITests.swift */; };
+		9B95BDC723104D4A00D93354 /* Objects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B95BDC623104D4A00D93354 /* Objects.swift */; };
+		9B95BDC923104E6F00D93354 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B95BDC823104E6F00D93354 /* Product.swift */; };
+		9B95BDCB23104EEF00D93354 /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B95BDCA23104EEF00D93354 /* StringConstants.swift */; };
+		9B95BDCD2310531E00D93354 /* ProductSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B95BDCC2310531E00D93354 /* ProductSection.swift */; };
+		9B95BDD023105E5200D93354 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B95BDCF23105E5200D93354 /* Extensions.swift */; };
+		9B95BDD42310DD8900D93354 /* ProductSectionHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B95BDD22310DD8900D93354 /* ProductSectionHeaderTableViewCell.swift */; };
+		9B95BDD52310DD8900D93354 /* ProductSectionHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B95BDD32310DD8900D93354 /* ProductSectionHeaderTableViewCell.xib */; };
+		CD146AB25F816837CA02FAD5 /* libPods-fyndCartSwift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 53095AFD4D6A302933733CC4 /* libPods-fyndCartSwift.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9B95BDA8231039B700D93354 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9B95BD8B231039B500D93354 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9B95BD92231039B500D93354;
+			remoteInfo = fyndCartSwift;
+		};
+		9B95BDB3231039B700D93354 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9B95BD8B231039B500D93354 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9B95BD92231039B500D93354;
+			remoteInfo = fyndCartSwift;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3D4B71A5C31FDE64864CE1CD /* Pods-fyndCartSwiftUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fyndCartSwiftUITests.debug.xcconfig"; path = "Target Support Files/Pods-fyndCartSwiftUITests/Pods-fyndCartSwiftUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		44E2EAB87FC1EEA88893DC9B /* libPods-fyndCartSwiftTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-fyndCartSwiftTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		53095AFD4D6A302933733CC4 /* libPods-fyndCartSwift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-fyndCartSwift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F870166E595D84AC581A71E /* libPods-fyndCartSwiftUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-fyndCartSwiftUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B58A07E231118F500314473 /* ProductSectionHeaderSegementedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSectionHeaderSegementedTableViewCell.swift; sourceTree = "<group>"; };
+		9B58A07F231118F500314473 /* ProductSectionHeaderSegementedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductSectionHeaderSegementedTableViewCell.xib; sourceTree = "<group>"; };
+		9B58A08323111B3400314473 /* ListCollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCollectionViewTableViewCell.swift; sourceTree = "<group>"; };
+		9B58A08423111B3400314473 /* ListCollectionViewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListCollectionViewTableViewCell.xib; sourceTree = "<group>"; };
+		9B58A08823111BC700314473 /* ProductColletionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductColletionViewCell.swift; sourceTree = "<group>"; };
+		9B58A08923111BC700314473 /* ProductColletionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductColletionViewCell.xib; sourceTree = "<group>"; };
+		9B58A08C231148CA00314473 /* CustomCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		9B58A090231174B100314473 /* ShowImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowImageViewController.swift; sourceTree = "<group>"; };
+		9B58A092231268EA00314473 /* ProductViewController+APIRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductViewController+APIRequests.swift"; sourceTree = "<group>"; };
+		9B58A0942312696E00314473 /* ProductViewController+TableViewDelegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductViewController+TableViewDelegates.swift"; sourceTree = "<group>"; };
+		9B58A096231269F600314473 /* ProductViewController+TableViewCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductViewController+TableViewCells.swift"; sourceTree = "<group>"; };
+		9B95BD93231039B500D93354 /* fyndCartSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fyndCartSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B95BD96231039B500D93354 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9B95BD98231039B500D93354 /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
+		9B95BD9B231039B500D93354 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9B95BD9D231039B700D93354 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9B95BDA0231039B700D93354 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9B95BDA2231039B700D93354 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B95BDA7231039B700D93354 /* fyndCartSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fyndCartSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B95BDAB231039B700D93354 /* fyndCartSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fyndCartSwiftTests.swift; sourceTree = "<group>"; };
+		9B95BDAD231039B700D93354 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B95BDB2231039B700D93354 /* fyndCartSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fyndCartSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B95BDB6231039B700D93354 /* fyndCartSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fyndCartSwiftUITests.swift; sourceTree = "<group>"; };
+		9B95BDB8231039B700D93354 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B95BDC623104D4A00D93354 /* Objects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Objects.swift; sourceTree = "<group>"; };
+		9B95BDC823104E6F00D93354 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		9B95BDCA23104EEF00D93354 /* StringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstants.swift; sourceTree = "<group>"; };
+		9B95BDCC2310531E00D93354 /* ProductSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSection.swift; sourceTree = "<group>"; };
+		9B95BDCF23105E5200D93354 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		9B95BDD22310DD8900D93354 /* ProductSectionHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSectionHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		9B95BDD32310DD8900D93354 /* ProductSectionHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductSectionHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		A0DE01F198D346FB391FCAA3 /* Pods-fyndCartSwiftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fyndCartSwiftUITests.release.xcconfig"; path = "Target Support Files/Pods-fyndCartSwiftUITests/Pods-fyndCartSwiftUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A0E2E6E2B4BA4C38B4302035 /* Pods-fyndCartSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fyndCartSwift.debug.xcconfig"; path = "Target Support Files/Pods-fyndCartSwift/Pods-fyndCartSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		B5CA9189437B13FF055132CC /* Pods-fyndCartSwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fyndCartSwiftTests.release.xcconfig"; path = "Target Support Files/Pods-fyndCartSwiftTests/Pods-fyndCartSwiftTests.release.xcconfig"; sourceTree = "<group>"; };
+		E827742EC7D204241B6D9A93 /* Pods-fyndCartSwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fyndCartSwiftTests.debug.xcconfig"; path = "Target Support Files/Pods-fyndCartSwiftTests/Pods-fyndCartSwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E9AADF56591AC2E7AC33CDA6 /* Pods-fyndCartSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fyndCartSwift.release.xcconfig"; path = "Target Support Files/Pods-fyndCartSwift/Pods-fyndCartSwift.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9B95BD90231039B500D93354 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD146AB25F816837CA02FAD5 /* libPods-fyndCartSwift.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B95BDA4231039B700D93354 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C4ECFE5475C107662C48470 /* libPods-fyndCartSwiftTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B95BDAF231039B700D93354 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E9704A9164B00F1BBE2A33A /* libPods-fyndCartSwiftUITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		27BCA4F71E689E44D3D03464 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A0E2E6E2B4BA4C38B4302035 /* Pods-fyndCartSwift.debug.xcconfig */,
+				E9AADF56591AC2E7AC33CDA6 /* Pods-fyndCartSwift.release.xcconfig */,
+				E827742EC7D204241B6D9A93 /* Pods-fyndCartSwiftTests.debug.xcconfig */,
+				B5CA9189437B13FF055132CC /* Pods-fyndCartSwiftTests.release.xcconfig */,
+				3D4B71A5C31FDE64864CE1CD /* Pods-fyndCartSwiftUITests.debug.xcconfig */,
+				A0DE01F198D346FB391FCAA3 /* Pods-fyndCartSwiftUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		65091CA3C0B6D960369D0411 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				53095AFD4D6A302933733CC4 /* libPods-fyndCartSwift.a */,
+				44E2EAB87FC1EEA88893DC9B /* libPods-fyndCartSwiftTests.a */,
+				6F870166E595D84AC581A71E /* libPods-fyndCartSwiftUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9B58A07D231118CB00314473 /* ProductSectionHeaderSegementedTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				9B58A07E231118F500314473 /* ProductSectionHeaderSegementedTableViewCell.swift */,
+				9B58A07F231118F500314473 /* ProductSectionHeaderSegementedTableViewCell.xib */,
+			);
+			path = ProductSectionHeaderSegementedTableViewCell;
+			sourceTree = "<group>";
+		};
+		9B58A08223111B0E00314473 /* ListCollectionViewTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				9B58A08323111B3400314473 /* ListCollectionViewTableViewCell.swift */,
+				9B58A08423111B3400314473 /* ListCollectionViewTableViewCell.xib */,
+			);
+			path = ListCollectionViewTableViewCell;
+			sourceTree = "<group>";
+		};
+		9B58A08723111BA600314473 /* ProductColletionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				9B58A08823111BC700314473 /* ProductColletionViewCell.swift */,
+				9B58A08923111BC700314473 /* ProductColletionViewCell.xib */,
+			);
+			path = ProductColletionViewCell;
+			sourceTree = "<group>";
+		};
+		9B58A08E2311747D00314473 /* ShowImageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9B58A090231174B100314473 /* ShowImageViewController.swift */,
+			);
+			path = ShowImageViewController;
+			sourceTree = "<group>";
+		};
+		9B58A08F2311748D00314473 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9B58A08E2311747D00314473 /* ShowImageViewController */,
+				9B95BDC523104CAE00D93354 /* ProductListViewController */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		9B95BD8A231039B500D93354 = {
+			isa = PBXGroup;
+			children = (
+				9B95BD95231039B500D93354 /* fyndCartSwift */,
+				9B95BDAA231039B700D93354 /* fyndCartSwiftTests */,
+				9B95BDB5231039B700D93354 /* fyndCartSwiftUITests */,
+				9B95BD94231039B500D93354 /* Products */,
+				27BCA4F71E689E44D3D03464 /* Pods */,
+				65091CA3C0B6D960369D0411 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9B95BD94231039B500D93354 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9B95BD93231039B500D93354 /* fyndCartSwift.app */,
+				9B95BDA7231039B700D93354 /* fyndCartSwiftTests.xctest */,
+				9B95BDB2231039B700D93354 /* fyndCartSwiftUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9B95BD95231039B500D93354 /* fyndCartSwift */ = {
+			isa = PBXGroup;
+			children = (
+				9B58A08F2311748D00314473 /* Controllers */,
+				9B95BDCE23105E3E00D93354 /* Utils */,
+				9B95BDC423104CA400D93354 /* Models */,
+				9B95BD96231039B500D93354 /* AppDelegate.swift */,
+				9B95BD9A231039B500D93354 /* Main.storyboard */,
+				9B95BD9D231039B700D93354 /* Assets.xcassets */,
+				9B95BD9F231039B700D93354 /* LaunchScreen.storyboard */,
+				9B95BDA2231039B700D93354 /* Info.plist */,
+				9B95BDCA23104EEF00D93354 /* StringConstants.swift */,
+			);
+			path = fyndCartSwift;
+			sourceTree = "<group>";
+		};
+		9B95BDAA231039B700D93354 /* fyndCartSwiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				9B95BDAB231039B700D93354 /* fyndCartSwiftTests.swift */,
+				9B95BDAD231039B700D93354 /* Info.plist */,
+			);
+			path = fyndCartSwiftTests;
+			sourceTree = "<group>";
+		};
+		9B95BDB5231039B700D93354 /* fyndCartSwiftUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9B95BDB6231039B700D93354 /* fyndCartSwiftUITests.swift */,
+				9B95BDB8231039B700D93354 /* Info.plist */,
+			);
+			path = fyndCartSwiftUITests;
+			sourceTree = "<group>";
+		};
+		9B95BDC423104CA400D93354 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9B95BDC623104D4A00D93354 /* Objects.swift */,
+				9B95BDC823104E6F00D93354 /* Product.swift */,
+				9B95BDCC2310531E00D93354 /* ProductSection.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9B95BDC523104CAE00D93354 /* ProductListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9B58A08723111BA600314473 /* ProductColletionViewCell */,
+				9B58A08223111B0E00314473 /* ListCollectionViewTableViewCell */,
+				9B58A07D231118CB00314473 /* ProductSectionHeaderSegementedTableViewCell */,
+				9B95BDD12310DD6C00D93354 /* ProductSectionHeaderTableViewCell */,
+				9B95BD98231039B500D93354 /* ProductListViewController.swift */,
+				9B58A08C231148CA00314473 /* CustomCollectionViewFlowLayout.swift */,
+				9B58A092231268EA00314473 /* ProductViewController+APIRequests.swift */,
+				9B58A0942312696E00314473 /* ProductViewController+TableViewDelegates.swift */,
+				9B58A096231269F600314473 /* ProductViewController+TableViewCells.swift */,
+			);
+			path = ProductListViewController;
+			sourceTree = "<group>";
+		};
+		9B95BDCE23105E3E00D93354 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				9B95BDCF23105E5200D93354 /* Extensions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		9B95BDD12310DD6C00D93354 /* ProductSectionHeaderTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				9B95BDD22310DD8900D93354 /* ProductSectionHeaderTableViewCell.swift */,
+				9B95BDD32310DD8900D93354 /* ProductSectionHeaderTableViewCell.xib */,
+			);
+			path = ProductSectionHeaderTableViewCell;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9B95BD92231039B500D93354 /* fyndCartSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B95BDBB231039B700D93354 /* Build configuration list for PBXNativeTarget "fyndCartSwift" */;
+			buildPhases = (
+				333D98B6DD3D44C9BAF8382E /* [CP] Check Pods Manifest.lock */,
+				9B95BD8F231039B500D93354 /* Sources */,
+				9B95BD90231039B500D93354 /* Frameworks */,
+				9B95BD91231039B500D93354 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = fyndCartSwift;
+			productName = fyndCartSwift;
+			productReference = 9B95BD93231039B500D93354 /* fyndCartSwift.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9B95BDA6231039B700D93354 /* fyndCartSwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B95BDBE231039B700D93354 /* Build configuration list for PBXNativeTarget "fyndCartSwiftTests" */;
+			buildPhases = (
+				CC92CD4E6DEE0F30904C90A7 /* [CP] Check Pods Manifest.lock */,
+				9B95BDA3231039B700D93354 /* Sources */,
+				9B95BDA4231039B700D93354 /* Frameworks */,
+				9B95BDA5231039B700D93354 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9B95BDA9231039B700D93354 /* PBXTargetDependency */,
+			);
+			name = fyndCartSwiftTests;
+			productName = fyndCartSwiftTests;
+			productReference = 9B95BDA7231039B700D93354 /* fyndCartSwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9B95BDB1231039B700D93354 /* fyndCartSwiftUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B95BDC1231039B700D93354 /* Build configuration list for PBXNativeTarget "fyndCartSwiftUITests" */;
+			buildPhases = (
+				1DCA179ECB2A63B21D58ED28 /* [CP] Check Pods Manifest.lock */,
+				9B95BDAE231039B700D93354 /* Sources */,
+				9B95BDAF231039B700D93354 /* Frameworks */,
+				9B95BDB0231039B700D93354 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9B95BDB4231039B700D93354 /* PBXTargetDependency */,
+			);
+			name = fyndCartSwiftUITests;
+			productName = fyndCartSwiftUITests;
+			productReference = 9B95BDB2231039B700D93354 /* fyndCartSwiftUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9B95BD8B231039B500D93354 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = "Abhijit Hadkar";
+				TargetAttributes = {
+					9B95BD92231039B500D93354 = {
+						CreatedOnToolsVersion = 10.3;
+					};
+					9B95BDA6231039B700D93354 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = 9B95BD92231039B500D93354;
+					};
+					9B95BDB1231039B700D93354 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = 9B95BD92231039B500D93354;
+					};
+				};
+			};
+			buildConfigurationList = 9B95BD8E231039B500D93354 /* Build configuration list for PBXProject "fyndCartSwift" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9B95BD8A231039B500D93354;
+			productRefGroup = 9B95BD94231039B500D93354 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9B95BD92231039B500D93354 /* fyndCartSwift */,
+				9B95BDA6231039B700D93354 /* fyndCartSwiftTests */,
+				9B95BDB1231039B700D93354 /* fyndCartSwiftUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9B95BD91231039B500D93354 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B95BDD52310DD8900D93354 /* ProductSectionHeaderTableViewCell.xib in Resources */,
+				9B95BDA1231039B700D93354 /* LaunchScreen.storyboard in Resources */,
+				9B58A08623111B3400314473 /* ListCollectionViewTableViewCell.xib in Resources */,
+				9B58A081231118F600314473 /* ProductSectionHeaderSegementedTableViewCell.xib in Resources */,
+				9B95BD9E231039B700D93354 /* Assets.xcassets in Resources */,
+				9B95BD9C231039B500D93354 /* Main.storyboard in Resources */,
+				9B58A08B23111BC700314473 /* ProductColletionViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B95BDA5231039B700D93354 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B95BDB0231039B700D93354 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1DCA179ECB2A63B21D58ED28 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-fyndCartSwiftUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		333D98B6DD3D44C9BAF8382E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-fyndCartSwift-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC92CD4E6DEE0F30904C90A7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-fyndCartSwiftTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9B95BD8F231039B500D93354 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B58A08A23111BC700314473 /* ProductColletionViewCell.swift in Sources */,
+				9B95BD99231039B500D93354 /* ProductListViewController.swift in Sources */,
+				9B95BDCD2310531E00D93354 /* ProductSection.swift in Sources */,
+				9B95BDC923104E6F00D93354 /* Product.swift in Sources */,
+				9B95BD97231039B500D93354 /* AppDelegate.swift in Sources */,
+				9B58A08523111B3400314473 /* ListCollectionViewTableViewCell.swift in Sources */,
+				9B58A097231269F600314473 /* ProductViewController+TableViewCells.swift in Sources */,
+				9B58A08D231148CA00314473 /* CustomCollectionViewFlowLayout.swift in Sources */,
+				9B95BDD42310DD8900D93354 /* ProductSectionHeaderTableViewCell.swift in Sources */,
+				9B95BDCB23104EEF00D93354 /* StringConstants.swift in Sources */,
+				9B58A080231118F600314473 /* ProductSectionHeaderSegementedTableViewCell.swift in Sources */,
+				9B95BDC723104D4A00D93354 /* Objects.swift in Sources */,
+				9B58A0952312696E00314473 /* ProductViewController+TableViewDelegates.swift in Sources */,
+				9B58A093231268EA00314473 /* ProductViewController+APIRequests.swift in Sources */,
+				9B95BDD023105E5200D93354 /* Extensions.swift in Sources */,
+				9B58A091231174B100314473 /* ShowImageViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B95BDA3231039B700D93354 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B95BDAC231039B700D93354 /* fyndCartSwiftTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B95BDAE231039B700D93354 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B95BDB7231039B700D93354 /* fyndCartSwiftUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9B95BDA9231039B700D93354 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9B95BD92231039B500D93354 /* fyndCartSwift */;
+			targetProxy = 9B95BDA8231039B700D93354 /* PBXContainerItemProxy */;
+		};
+		9B95BDB4231039B700D93354 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9B95BD92231039B500D93354 /* fyndCartSwift */;
+			targetProxy = 9B95BDB3231039B700D93354 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9B95BD9A231039B500D93354 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9B95BD9B231039B500D93354 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9B95BD9F231039B700D93354 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9B95BDA0231039B700D93354 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9B95BDB9231039B700D93354 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9B95BDBA231039B700D93354 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9B95BDBC231039B700D93354 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0E2E6E2B4BA4C38B4302035 /* Pods-fyndCartSwift.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PT892Q8PX5;
+				INFOPLIST_FILE = fyndCartSwift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = abhijitHadkar.fyndCartSwift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9B95BDBD231039B700D93354 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9AADF56591AC2E7AC33CDA6 /* Pods-fyndCartSwift.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PT892Q8PX5;
+				INFOPLIST_FILE = fyndCartSwift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = abhijitHadkar.fyndCartSwift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9B95BDBF231039B700D93354 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E827742EC7D204241B6D9A93 /* Pods-fyndCartSwiftTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PT892Q8PX5;
+				INFOPLIST_FILE = fyndCartSwiftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = abhijitHadkar.fyndCartSwiftTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fyndCartSwift.app/fyndCartSwift";
+			};
+			name = Debug;
+		};
+		9B95BDC0231039B700D93354 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5CA9189437B13FF055132CC /* Pods-fyndCartSwiftTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PT892Q8PX5;
+				INFOPLIST_FILE = fyndCartSwiftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = abhijitHadkar.fyndCartSwiftTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fyndCartSwift.app/fyndCartSwift";
+			};
+			name = Release;
+		};
+		9B95BDC2231039B700D93354 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D4B71A5C31FDE64864CE1CD /* Pods-fyndCartSwiftUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PT892Q8PX5;
+				INFOPLIST_FILE = fyndCartSwiftUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = abhijitHadkar.fyndCartSwiftUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = fyndCartSwift;
+			};
+			name = Debug;
+		};
+		9B95BDC3231039B700D93354 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0DE01F198D346FB391FCAA3 /* Pods-fyndCartSwiftUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PT892Q8PX5;
+				INFOPLIST_FILE = fyndCartSwiftUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = abhijitHadkar.fyndCartSwiftUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = fyndCartSwift;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9B95BD8E231039B500D93354 /* Build configuration list for PBXProject "fyndCartSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B95BDB9231039B700D93354 /* Debug */,
+				9B95BDBA231039B700D93354 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9B95BDBB231039B700D93354 /* Build configuration list for PBXNativeTarget "fyndCartSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B95BDBC231039B700D93354 /* Debug */,
+				9B95BDBD231039B700D93354 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9B95BDBE231039B700D93354 /* Build configuration list for PBXNativeTarget "fyndCartSwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B95BDBF231039B700D93354 /* Debug */,
+				9B95BDC0231039B700D93354 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9B95BDC1231039B700D93354 /* Build configuration list for PBXNativeTarget "fyndCartSwiftUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B95BDC2231039B700D93354 /* Debug */,
+				9B95BDC3231039B700D93354 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9B95BD8B231039B500D93354 /* Project object */;
+}
