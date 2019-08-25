@@ -50,6 +50,8 @@ extension ProductListViewController{
             }else{
                 cell.segmentedControl.selectedSegmentIndex = -1
             }
+            
+            
             cell.sectionIndex = section
             cell.containerView.backgroundColor = UIColor.black.withAlphaComponent(0.1)
             cell.backgroundColor = UIColor.white
