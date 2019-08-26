@@ -52,6 +52,12 @@ extension ProductListViewController : UITableViewDelegate,UITableViewDataSource{
         }   
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let product = self.finalArray[indexPath.section].arrays?[indexPath.row],let productUrl = product.productImageUrl,let productName = product.name{
+            self.redirectToShowImageViewController(imageName: productUrl, productName: productName, indexPath: indexPath, sectionIndex: indexPath.section)
+        }
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
@@ -75,52 +81,27 @@ extension ProductListViewController : UITableViewDelegate,UITableViewDataSource{
             if isListView{
                 let containerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: 50))
                 containerView.addSubview(showProductSectionHeaderTableViewCell(section: section))
-//                containerView.translatesAutoresizingMaskIntoConstraints = false
-                
-                
-//                containerView.widthAnchor.constraint(equalTo: tableView.widthAnchor).isActive = true
-//                containerView.leadingAnchor.constraint(equalTo:  self.tableView.leadingAnchor).isActive = true
-//                containerView.trailingAnchor.constraint(equalTo: self.tableView.trailingAnchor).isActive = true
-//                containerView.topAnchor.constraint(equalTo: self.tableView.topAnchor).isActive = true
-//                containerView.bottomAnchor.constraint(equalTo: self.tableView.bottomAnchor).isActive = true
-                
                 return containerView
             }else{
                 let containerView = UIView()
-//                return showProductSectionHeaderSegementedTableViewCell(section: section)
                 containerView.addSubview(showProductSectionHeaderSegementedTableViewCell(section: section))
-//                containerView.translatesAutoresizingMaskIntoConstraints = false
-//                containerView.widthAnchor.constraint(equalTo: tableView.widthAnchor).isActive = true
-//                containerView.leadingAnchor.constraint(equalTo: self.tableView.leadingAnchor).isActive = true
-//                containerView.trailingAnchor.constraint(equalTo: self.tableView.trailingAnchor).isActive = true
-//                containerView.topAnchor.constraint(equalTo: self.tableView.topAnchor).isActive = true
-//                containerView.bottomAnchor.constraint(equalTo: self.tableView.bottomAnchor).isActive = true
                 return containerView
             }
         }
         return UIView()
     }
     
-    
-    
-    //    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    //        if isListView{
-    //            return UITableView.automaticDimension
-    //        }else{
-    //            return 420
-    //        }
-    //    }
-    
     func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         return true
     }
     
     func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-        if let product = self.finalArray[sourceIndexPath.section].arrays?[sourceIndexPath.row]{
-            self.finalArray[destinationIndexPath.section].arrays?.insert(product, at: destinationIndexPath.row)
-            
-            self.finalArray[sourceIndexPath.section].arrays?.remove(at: sourceIndexPath.row)
-            
+        if isListView{
+            if let product = self.finalArray[sourceIndexPath.section].arrays?[sourceIndexPath.row]{
+                self.finalArray[destinationIndexPath.section].arrays?.insert(product, at: destinationIndexPath.row)
+                
+                self.finalArray[sourceIndexPath.section].arrays?.remove(at: sourceIndexPath.row)
+            }
         }
     }
     

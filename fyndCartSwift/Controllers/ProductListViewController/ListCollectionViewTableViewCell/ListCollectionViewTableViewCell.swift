@@ -9,7 +9,7 @@
 import UIKit
 
 protocol TileSelectedProtocol {
-    func tileSelected(indexPath : IndexPath,sectionIndex : Int)
+    func tileSelected(indexPath : IndexPath,sectionIndex : Int,product : Product)
 }
 
 class ListCollectionViewTableViewCell: UITableViewCell {
@@ -38,16 +38,7 @@ class ListCollectionViewTableViewCell: UITableViewCell {
         self.longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleGesture(gesture:)))
         self.collectionView.addGestureRecognizer(self.longPressGesture!)
 
-//        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-//        layout.sectionInset = UIEdgeInsets(top: 0, left: 4, bottom: 0, right: 4)
-//        layout.itemSize = CGSize(width: UIScreen.main.bounds.width/3, height: UIScreen.main.bounds.width/3 + 50)
-//        layout.minimumInteritemSpacing = 0
-//        layout.minimumLineSpacing = 0
-//        layout.scrollDirection = .horizontal
-//        collectionView!.collectionViewLayout = layout
-    
     }
-
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
@@ -96,7 +87,7 @@ extension ListCollectionViewTableViewCell : UICollectionViewDelegate,UICollectio
         let flowayout = collectionViewLayout as? UICollectionViewFlowLayout
         let space: CGFloat = (flowayout?.minimumInteritemSpacing ?? 0.0) + (flowayout?.sectionInset.left ?? 0.0) + (flowayout?.sectionInset.right ?? 0.0)
         let size:CGFloat = (collectionView.frame.size.width - space) / 3.0
-//        return CGSize(width: size, height: size + 100)
+
         return CGSize(width: (UIScreen.main.bounds.width - 10) / 3,height : 180)
     }
     
@@ -111,8 +102,8 @@ extension ListCollectionViewTableViewCell : UICollectionViewDelegate,UICollectio
     
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let index = self.sectionInt{
-            self.tileSelectedDelegate?.tileSelected(indexPath: indexPath, sectionIndex: index)
+        if let index = self.sectionInt,let product = self.productList?[indexPath.row]{
+            self.tileSelectedDelegate?.tileSelected(indexPath: indexPath, sectionIndex: index, product: product)
         }
     }
     
@@ -123,6 +114,7 @@ extension ListCollectionViewTableViewCell : UICollectionViewDelegate,UICollectio
     func collectionView(_ collectionView: UICollectionView, moveItemAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         if let product = self.productList?.remove(at: sourceIndexPath.item){
             self.productList?.insert(product, at: destinationIndexPath.item)
+            self.collectionView.reloadData()
         }
     }
 }
@@ -138,7 +130,7 @@ extension ListCollectionViewTableViewCell{
             if let url = product.productImageUrl{
                 cell.productImageView.downloaded(from: url)
             }
-            cell.productImageView.contentMode = .scaleAspectFit
+            cell.productImageView.contentMode = .scaleAspectFill
             return cell
         }
         return ProductColletionViewCell()

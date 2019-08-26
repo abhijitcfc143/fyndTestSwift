@@ -47,3 +47,20 @@ extension UIImageView {
         downloaded(from: url, contentMode: mode)
     }
 }
+
+extension UIViewController{
+    func hideShowActivityIndicatorView(show : Bool,activityIndicatorView : UIActivityIndicatorView) {
+        if show{
+            DispatchQueue.main.async {
+                activityIndicatorView.startAnimating()
+                self.view.isUserInteractionEnabled = false
+            }
+            
+        }else{
+            DispatchQueue.main.async {
+                activityIndicatorView.stopAnimating()
+                self.view.isUserInteractionEnabled = true
+            }
+        }
+    }
+}

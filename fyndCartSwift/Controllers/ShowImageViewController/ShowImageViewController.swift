@@ -83,6 +83,7 @@ extension ShowImageViewController{
             self.productNameLabel.text = ""
         }
         
+        self.doneButton.addBorderShadowButton(color: UIColor.black.withAlphaComponent(0.1))
         
         let doubleTapGest = UITapGestureRecognizer(target: self, action: #selector(doubleTapToZoom(recognizer:)))
         doubleTapGest.numberOfTapsRequired = 2

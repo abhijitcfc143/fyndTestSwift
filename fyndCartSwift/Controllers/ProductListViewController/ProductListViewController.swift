@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ProductListViewController.swift
 //  fyndCartSwift
 //
 //  Created by Abhijit Hadkar on 23/08/19.
@@ -15,6 +15,7 @@ class ProductListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var editBarButtonItem: UIBarButtonItem!
     
+    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     var isListView = false
     var randomShowAnimation = false
     var finalArray = [ProductSection]()
@@ -103,7 +104,7 @@ extension ProductListViewController{
         
         let dispatchGroup = DispatchGroup()
         
-        
+        self.hideShowActivityIndicatorView(show: true, activityIndicatorView: self.activityIndicatorView)
         dispatchGroup.enter()
         if let jacketsURL = URL(string: apiURLs.jacketsURL){
             self.getJacketsList(url: jacketsURL) {
@@ -140,6 +141,7 @@ extension ProductListViewController{
                 return (hm1.sectionIndex!) < (hm2.sectionIndex!)
             })
             
+            self.hideShowActivityIndicatorView(show: false, activityIndicatorView: self.activityIndicatorView)
             self.finalArray = sortedArr
             self.tableView.reloadData()
         }
@@ -151,11 +153,11 @@ extension ProductListViewController{
 //MARK:- ExpandableButtonClickedProtocol,TileSelectedProtocol,CropImageDelegate
 extension ProductListViewController : ExpandableButtonClickedProtocol,TileSelectedProtocol,CropImageDelegate{
 
-    func tileSelected(indexPath: IndexPath, sectionIndex: Int) {
-        if let productImageName = self.finalArray[sectionIndex].arrays?[indexPath.row].productImageUrl,let productName = self.finalArray[sectionIndex].arrays?[indexPath.row].name{
+    func tileSelected(indexPath: IndexPath, sectionIndex: Int,product : Product) {
+        if let productImageName = product.productImageUrl,let productName = product.name{
             redirectToShowImageViewController(imageName: productImageName, productName: productName, indexPath: indexPath, sectionIndex: sectionIndex)
         }else{
-            if let productName = self.finalArray[sectionIndex].arrays?[indexPath.row].name{
+            if let productName = product.name{
                 redirectToShowImageViewController(imageName: "fyndLogo", productName: productName, indexPath: indexPath, sectionIndex: sectionIndex)
             }
         }
@@ -180,7 +182,7 @@ extension ProductListViewController : ExpandableButtonClickedProtocol,TileSelect
             if let expanded = self.finalArray[section].isSectionExpanded{
                 self.finalArray[section].isSectionExpanded = !expanded
                 
-                button.setTitle(expanded ? "Open" : "Close", for: UIControl.State.normal)
+                button.setTitle(expanded ? ">" : "^", for: UIControl.State.normal)
                 
                 if expanded{                    
                     self.tableView.deleteRows(at: indexPathArray, with: UITableView.RowAnimation.fade)
@@ -206,9 +208,7 @@ extension ProductListViewController : ExpandableButtonClickedProtocol,TileSelect
                                     self.finalArray[index].sectionIndexExpanded = nil
                                     print("Delete \(index) section")
                                     
-                                    let c = self.tableView.tableHeaderView
-                                                                        
-                                    print(c)
+                                    
                                 }
                             }
                         }

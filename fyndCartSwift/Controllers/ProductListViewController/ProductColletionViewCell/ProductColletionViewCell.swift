@@ -18,7 +18,8 @@ class ProductColletionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        self.containerView.addBorderShadow(color: UIColor.black)        
+        self.productImageView.layer.cornerRadius = 5.0
+        self.containerView.addBorderShadow(color: UIColor.black)
     }
 
 }

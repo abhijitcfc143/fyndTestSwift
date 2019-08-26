@@ -20,6 +20,7 @@
 		9B58A093231268EA00314473 /* ProductViewController+APIRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B58A092231268EA00314473 /* ProductViewController+APIRequests.swift */; };
 		9B58A0952312696E00314473 /* ProductViewController+TableViewDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B58A0942312696E00314473 /* ProductViewController+TableViewDelegates.swift */; };
 		9B58A097231269F600314473 /* ProductViewController+TableViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B58A096231269F600314473 /* ProductViewController+TableViewCells.swift */; };
+		9B58A0A12313B05300314473 /* BounceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B58A0A02313B05300314473 /* BounceButton.swift */; };
 		9B95BD97231039B500D93354 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B95BD96231039B500D93354 /* AppDelegate.swift */; };
 		9B95BD99231039B500D93354 /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B95BD98231039B500D93354 /* ProductListViewController.swift */; };
 		9B95BD9C231039B500D93354 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B95BD9A231039B500D93354 /* Main.storyboard */; };
@@ -70,6 +71,7 @@
 		9B58A092231268EA00314473 /* ProductViewController+APIRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductViewController+APIRequests.swift"; sourceTree = "<group>"; };
 		9B58A0942312696E00314473 /* ProductViewController+TableViewDelegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductViewController+TableViewDelegates.swift"; sourceTree = "<group>"; };
 		9B58A096231269F600314473 /* ProductViewController+TableViewCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductViewController+TableViewCells.swift"; sourceTree = "<group>"; };
+		9B58A0A02313B05300314473 /* BounceButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BounceButton.swift; sourceTree = "<group>"; };
 		9B95BD93231039B500D93354 /* fyndCartSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fyndCartSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B95BD96231039B500D93354 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B95BD98231039B500D93354 /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				9B95BDCF23105E5200D93354 /* Extensions.swift */,
+				9B58A0A02313B05300314473 /* BounceButton.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -506,6 +509,7 @@
 				9B58A08523111B3400314473 /* ListCollectionViewTableViewCell.swift in Sources */,
 				9B58A097231269F600314473 /* ProductViewController+TableViewCells.swift in Sources */,
 				9B58A08D231148CA00314473 /* CustomCollectionViewFlowLayout.swift in Sources */,
+				9B58A0A12313B05300314473 /* BounceButton.swift in Sources */,
 				9B95BDD42310DD8900D93354 /* ProductSectionHeaderTableViewCell.swift in Sources */,
 				9B95BDCB23104EEF00D93354 /* StringConstants.swift in Sources */,
 				9B58A080231118F600314473 /* ProductSectionHeaderSegementedTableViewCell.swift in Sources */,
